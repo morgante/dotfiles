@@ -1,0 +1,6 @@
+#! /bin/bash
+ 
+while [ 1 ]; do
+	ssh -ND 8080 arthus@morgante.net &> /dev/null
+	sleep 5
+done
