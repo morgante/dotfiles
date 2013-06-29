@@ -54,3 +54,10 @@ defaults write com.apple.Dock autohide -bool TRUE;
 
 # Restart Dock
 killall Dock
+
+###############################################################################
+# Clean Up                                                                    #
+###############################################################################
+
+# touch this file, so Pupept knows this script has already been run
+touch ~/.osx
