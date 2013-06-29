@@ -17,3 +17,10 @@ scutil --set ComputerName "mimas"
 scutil --set HostName "mimas"
 scutil --set LocalHostName "mimas"
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "mimas"
+
+# Set standby delay to 24 hours (default is 1 hour)
+sudo pmset -a standbydelay 86400
+
+# Never sleep computer or display
+systemsetup -setcomputersleep Off > /dev/null
+systemsetup -setdisplaysleep Off > /dev/null
