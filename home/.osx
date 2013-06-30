@@ -287,8 +287,8 @@ chflags nohidden ~/Library
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.Dock mouse-over-hilite-stack -bool true
+# Disable highlight hover effect for the grid view of a stack (Dock)
+defaults write com.apple.Dock mouse-over-hilite-stack -bool false
 
 # Enable spring loading for all Dock items
 defaults write com.apple.Dock enable-spring-load-actions-on-all-items -bool true
