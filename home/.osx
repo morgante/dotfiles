@@ -16,8 +16,11 @@
 spctl --master-disable
 
 ###############################################################################
-# General UI/UX                                                               #
+# General                                                                     #
 ###############################################################################
+
+# Set proxy bypass settings
+networksetup -setproxybypassdomains Wi-Fi localhost *.local
 
 # Set computer name (as done via System Preferences → Sharing)
 scutil --set ComputerName "mimas"
