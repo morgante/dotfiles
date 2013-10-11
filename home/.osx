@@ -22,12 +22,6 @@ spctl --master-disable
 # Set proxy bypass settings
 networksetup -setproxybypassdomains Wi-Fi localhost *.local *.dev
 
-# Set computer name (as done via System Preferences → Sharing)
-scutil --set ComputerName "mimas"
-scutil --set HostName "mimas"
-scutil --set LocalHostName "mimas"
-defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "mimas"
-
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
@@ -426,5 +420,5 @@ done
 # Clean Up                                                                    #
 ###############################################################################
 
-# touch this file, so Pupept knows this script has already been run
+# touch this file, so Puppet knows this script has already been run
 touch ~/.osx
