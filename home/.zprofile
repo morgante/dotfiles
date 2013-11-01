@@ -10,3 +10,6 @@ alias bi-analytics2='mongo --host 10.10.10.243 bi_analytics'
 
 # Get status of all git repos in current directory
 alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git status \;"
+
+# BI composer
+alias phpcomp="php /opt/boxen/bin/composer.phar"
