@@ -16,6 +16,7 @@ alias ssx screenSizeX
 alias ssy screenSizeY
 
 # Position aliases
+alias middle ${sox}+${ssx}/8;${soy} ${ssx}/8*6;${ssy}
 alias centered ${sox}+${ssx}/8;${soy}+${ssy}/8 ${ssx}/8*6;${ssy}/8*6
 alias fullscreen ${sox};${soy} ${ssx};${ssy}
 alias leftHalf ${sox};${soy} ${ssx}/2;${ssy}
@@ -48,8 +49,9 @@ bind up:ctrl;alt;shift        move ${topRightQuarter}
 bind down:ctrl;alt;shift      move ${bottomLeftQuarter}
 
 # Full screen
-bind m:cmd;alt;ctrl     move ${fullscreen}
-bind c:cmd;alt;ctrl     move ${centered}
+bind z:cmd;ctrl;shift	move ${fullscreen}
+bind x:cmd;ctrl;shift	move ${middle}
+bind c:cmd;ctrl;shift	move ${centered}
 
 # next screen
 bind right:cmd;alt;ctrl;shift throw next
