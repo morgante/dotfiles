@@ -13,5 +13,8 @@ alias bi-solr="(cd /opt/boxen/homebrew/Cellar/solr36/3.6.2/libexec/example/; jav
 # Get status of all git repos in current directory
 alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git status \;"
 
+# Add AWS to path
+export PATH=$PATH:/Users/mpell/code/aws/eb/eb/macosx/python2.7/
+
 # BI composer
 alias phpcomp="php /opt/boxen/bin/composer.phar"
