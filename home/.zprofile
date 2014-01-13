@@ -18,3 +18,6 @@ export PATH=$PATH:/Users/mpell/code/aws/eb/eb/macosx/python2.7/
 
 # BI composer
 alias phpcomp="php /opt/boxen/bin/composer.phar"
+
+# Docker Stuff
+export FORWARD_DOCKER_PORTS=true
