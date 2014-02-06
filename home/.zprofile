@@ -26,4 +26,4 @@ export GITSHOTS_SERVER_URL="http://blooming-earth-3802.herokuapp.com"
 export FORWARD_DOCKER_PORTS=true
 
 # Lame Sublime
-alias sub="open -a \"Sublime Text 2\" ."
+alias sub="open -a \"Sublime Text 2\""
