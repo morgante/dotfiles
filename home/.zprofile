@@ -25,7 +25,7 @@ export GITSHOTS_SERVER_URL="http://blooming-earth-3802.herokuapp.com"
 # Docker Stuff
 export FORWARD_DOCKER_PORTS=true
 export DOCKER_HOST="tcp://0.0.0.0:4244"
-alias docker-killall='docker kill $(docker ps -q) # Kill all running containers
+alias docker-killall='docker kill $(docker ps -q)'
 
 # Lame Sublime
 alias sub="open -a \"Sublime Text 2\""
