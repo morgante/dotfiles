@@ -27,5 +27,8 @@ export FORWARD_DOCKER_PORTS=true
 export DOCKER_HOST="tcp://0.0.0.0:4244"
 alias docker-killall='docker kill $(docker ps -q)'
 
+# Lazy git
+alias up='git commit -a -m "yo" && git push'
+
 # Lame Sublime
 alias sub="open -a \"Sublime Text 2\""
