@@ -1,5 +1,4 @@
 #! /bin/bash
  
-if [ "$(ps ax | grep tunnel-start.sh | grep -vc grep)" -lt 1 ]; then
- sudo -u mpell /Users/mpell/.tunnel &
-fi
+kill $(cat process.pid)
+spiped -e -f -s '[0.0.0.0]:8089' -t '[107.170.94.89]:49168' -k ~/.spiped/spiped.key -p ~/.spiped/process.pid
