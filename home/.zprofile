@@ -31,4 +31,4 @@ alias docker-killall='docker kill $(docker ps -q)'
 alias up='git commit -a -m "yo" && git push'
 
 # Lame Sublime
-alias sub="open -a \"Sublime Text 2\""
+alias sub="open -a \"Sublime Text 2\""PATH="/usr/local/heroku/bin:$PATH"
