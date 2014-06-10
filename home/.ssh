@@ -1,0 +1,2 @@
+Host dover.somespider.com
+  ForwardAgent yes
