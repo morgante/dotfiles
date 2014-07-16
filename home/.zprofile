@@ -16,6 +16,9 @@ alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git stat
 # Add AWS to path
 export PATH=$PATH:/Users/mpell/code/aws/eb/eb/macosx/python2.7/
 
+# Add our custom bin folder to path
+export PATH=$PATH:/Users/mpell/code/bin/
+
 # BI composer
 alias phpcomp="php /opt/boxen/bin/composer.phar"
 
