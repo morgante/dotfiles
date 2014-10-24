@@ -27,9 +27,11 @@ alias phpcomp="php /opt/boxen/bin/composer.phar"
 export GITSHOTS_SERVER_URL="http://blooming-earth-3802.herokuapp.com"
 
 # Docker Stuff
-export FORWARD_DOCKER_PORTS=true
-export DOCKER_HOST="tcp://0.0.0.0:4244"
+alias docker='docker --tls'
 alias docker-killall='docker kill $(docker ps -q)'
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/mpell/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 # Lazy git
 alias up='git commit -a -m "yo" && git push'
