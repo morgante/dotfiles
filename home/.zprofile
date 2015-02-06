@@ -39,3 +39,6 @@ alias up='git commit -a -m "yo" && git push'
 
 # Lame Sublime
 alias sub="open -a \"Sublime Text 2\""
+
+# Some Spider
+export DOCKER_SOMESPIDER_HOME=/home/core/spider
