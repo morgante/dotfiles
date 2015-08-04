@@ -31,7 +31,7 @@ alias why='yes 2>&1 | while read line ; do echo $line | say ; done'
 
 # Docker Stuff
 alias docker-killall='docker kill $(docker ps -q)'
-export DOCKER_HOST=tcp://localhost:48000
+export DOCKER_HOST=tcp://localhost:48002
 export DOCKER_TLS_VERIFY=0
 
 # Lazy git
