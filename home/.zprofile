@@ -42,3 +42,6 @@ alias sub="open -a \"Sublime Text 2\""
 
 # Some Spider
 export DOCKER_SOMESPIDER_HOME=/home/core/spider
+
+# DocNav
+export DOCNAV_ROOT=/home/vagrant/code/docnav/web
