@@ -38,7 +38,7 @@ export DOCKER_TLS_VERIFY=
 alias up='git commit -a -m "yo" && git push'
 
 # Lame Sublime
-alias sub="open -a \"Sublime Text 2\""
+alias sub="open -a \"Sublime Text\""
 
 # Some Spider
 export DOCKER_SOMESPIDER_HOME=/home/core/spider
