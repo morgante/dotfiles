@@ -46,3 +46,6 @@ export DOCKER_SOMESPIDER_HOME=/home/core/spider
 # DocNav
 export DOCNAV_ROOT=/home/vagrant/code/docnav/web
 export PDFPROCESSOR_ROOT=/home/vagrant/code/docnav/pdfprocessor
+
+# Anaconda
+export PATH="/Users/morgante/anaconda/bin:$PATH"
