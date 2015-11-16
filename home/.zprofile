@@ -49,3 +49,6 @@ export PDFPROCESSOR_ROOT=/home/vagrant/code/docnav/pdfprocessor
 
 # Anaconda
 export PATH="/Users/morgante/anaconda/bin:$PATH"
+
+# Docker Machine
+source ~/src/dotfiles/home/docker.sh
