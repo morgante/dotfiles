@@ -43,6 +43,14 @@ alias sub="open -a \"Sublime Text\""
 # Some Spider
 export DOCKER_SOMESPIDER_HOME=/home/core/spider
 
+# GPG
+[ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
+if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
+  export GPG_AGENT_INFO
+else
+  eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
+fi
+
 # DocNav
 export DOCNAV_ROOT=/Users/morgante/code/docnav/web
 export PDFPROCESSOR_ROOT=/Users/morgante/code/docnav/pdfprocessor
