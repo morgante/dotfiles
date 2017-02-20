@@ -1,4 +1,4 @@
 #! /bin/bash
  
 kill $(cat ~/.spiped/process.pid)
-spiped -e -f -s '[0.0.0.0]:8089' -t '[192.241.177.111]:49168' -k ~/.spiped/spiped.key -p ~/.spiped/process.pid
+spiped -e -f -s '[0.0.0.0]:8089' -t '[192.241.243.157]:49168' -k ~/.spiped/spiped.key -p ~/.spiped/process.pid
