@@ -31,8 +31,6 @@ alias why='yes 2>&1 | while read line ; do echo $line | say ; done'
 
 # Docker Stuff
 alias docker-killall='docker kill $(docker ps -q)'
-export DOCKER_HOST=tcp://localhost:48002
-export DOCKER_TLS_VERIFY=
 
 # Lazy git
 alias up='git commit -a -m "yo" && git push'
@@ -54,7 +52,7 @@ fi
 # DocNav
 export DOCNAV_ROOT=/Users/morgante/code/docnav/web
 export PDFPROCESSOR_ROOT=/Users/morgante/code/docnav/pdfprocessor
-export DOCNAV_LIBRARY_ROOT=/Users/morgante/code/docnav/pdfprocessor/tests
+export DOCNAV_LIBRARY_ROOT=/Users/morgante/code/docnav/library
 
 # Anaconda
 export PATH="/Users/morgante/anaconda/bin:$PATH"
