@@ -54,6 +54,9 @@ export DOCNAV_ROOT=/Users/morgante/code/docnav/web
 export PDFPROCESSOR_ROOT=/Users/morgante/code/docnav/pdfprocessor
 export DOCNAV_LIBRARY_ROOT=/Users/morgante/code/docnav/library
 
+# Google Cloud
+export CLOUDSDK_PYTHON=/opt/boxen/homebrew/bin/python2
+
 # Anaconda
 export PATH="/Users/morgante/anaconda/bin:$PATH"
 
