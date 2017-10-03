@@ -1,3 +1,15 @@
 #!/bin/bash
 
-../home/.osx
+DOT_HOME=${BASH_SOURCE%/*}/../home
+
+## Source my traditional OS X setup
+# source $DOT_HOME/.osx
+
+## Add config symlink
+ln -s $DOT_HOME/.ssh ~/.ssh/config
+ln -s $DOT_HOME/.zprofile ~/.zprofile
+ln -s $DOT_HOME/.zshrc ~/.zshrc
+ln -s ~/dotfiles/home/hammerspoon/ ~/.hammerspoon
+
+# Install ZSH
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
