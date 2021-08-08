@@ -1,0 +1,13 @@
+#!/bin/bash
+
+((!$#)) && echo Pass the Google Cloud Source Repo name as an arugment! && exit 1
+
+PROJECT_ID=$(gcloud info --format='value(config.project)')
+REPO_NAME=$1
+
+# Reset credential helper
+git config credential.helper gcloud.sh
+
+if git remote add google https://source.developers.google.com/p/$PROJECT_ID/r/$REPO_NAME ; then
+  echo Added remote github pointing to https://source.developers.google.com/p/$PROJECT_ID/r/$REPO_NAME
+fi;

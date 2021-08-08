@@ -1,15 +1,40 @@
 #!/bin/bash
 
-DOT_HOME=${BASH_SOURCE%/*}/../home
+# export DOT_HOME first
+# DOT_HOME=${BASH_SOURCE%/*}/../home
 
 ## Source my traditional OS X setup
 # source $DOT_HOME/.osx
 
+# Subvert OS X signing
+echo '127.0.0.1 ocsp.apple.com' | sudo tee -a /etc/hosts
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+
 ## Add config symlink
-ln -s $DOT_HOME/.ssh ~/.ssh/config
-ln -s $DOT_HOME/.zprofile ~/.zprofile
-ln -s $DOT_HOME/.zshrc ~/.zshrc
-ln -s ~/dotfiles/home/hammerspoon/ ~/.hammerspoon
+ln -sf $DOT_HOME/.ssh ~/.ssh/config
+ln -sf $DOT_HOME/.zprofile ~/.zprofile
+ln -sf $DOT_HOME/.zshrc ~/.zshrc
+ln -sf $DOT_HOME/git/config ~/.gitconfig
+ln -Fsf $DOT_HOME/hammerspoon/ ~/.hammerspoon
+ln -sf /usr/local/google/home/morgantep ~/google
+ln -s ~/go/src/github.com/google/addlicense/addlicense ~/go/bin/addlicense
+
+ln -Fsf $DOT_HOME/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+rm -rf  ~/.vscode/extensions
+ln -Fsf $DOT_HOME/vscode/extensions ~/.vscode/extensions
+rm -rf  ~/Library/Application\ Support/Code/User/snippets
+ln -Fsf $DOT_HOME/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
+
+
+ln -sf ~/sshfs/usr/local/google/home/morgantep ~/code/home
+
+# Iterm
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$DOT_HOME/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+
+# Touch
+touch ~/.private
 
 # Install ZSH
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+# curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh

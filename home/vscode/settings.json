@@ -1,0 +1,71 @@
+{
+    "window.zoomLevel": 4,
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.terraform": true
+    },
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "editor.tabSize": 2,
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "git.autofetch": true,
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.general.tags": [
+        "XXX",
+        "TODO",
+        "HACK",
+        "FIXME",
+        "BUG",
+        "QUESTION",
+        "[ ]",
+        "[x]"
+    ],
+    "cloudcode.gke": {
+        "projectIds": []
+    },
+    "python.languageServer": "Pylance",
+    "cSpell.userWords": [
+        "Kubernetes",
+        "anthos",
+        "devsite",
+        "endsetvar",
+        "gcloud",
+        "kubectl",
+        "nomos",
+        "setvar"
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "[markdown]": {
+        "editor.defaultFormatter": "darkriszty.markdown-table-prettify"
+    },
+    
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "editor.fontLigatures": null,
+    "terminal.explorerKind": "external"
+    // "go.formatOnSave": true
+    
+}
