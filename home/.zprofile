@@ -4,6 +4,9 @@ source ~/.private
 # Get status of all git repos in current directory
 alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git status \;"
 
+# Add home-brew to Path
+export PATH=$PATH:/opt/homebrew/bin/
+
 # Add AWS to path
 export PATH=$PATH:/Users/mpell/code/aws/eb/eb/macosx/python2.7/
 
