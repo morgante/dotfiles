@@ -1,5 +1,5 @@
 -- Fast space switching
-local spaces = require("hs._asm.undocumented.spaces")
+local spaces = require("hs.spaces")
 
 -- hs.hotkey.bind("ctrl", "left", function()
 --   hs.alert.show("Switch space")
