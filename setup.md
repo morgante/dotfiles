@@ -20,3 +20,5 @@
 - Mission Control > Spaces: uncheck automatically rearrange Spaces based on most recent use
 - Mission Control > Hot Corners: disable all
 - [Allow Hammerspoon control](https://github.com/Hammerspoon/hammerspoon/issues/237#issuecomment-476320469): `System Preferences > Security & Privacy > Privacy tab > Accessibility`
+
+1. Install hammerspoon spaces from [here](https://github.com/asmagill/hammerspoon_asm/tree/master/spaces) for M1.
