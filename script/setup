@@ -20,8 +20,6 @@ ln -sf /usr/local/google/home/morgantep ~/google
 ln -s ~/go/src/github.com/google/addlicense/addlicense ~/go/bin/addlicense
 
 ln -Fsf $DOT_HOME/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-rm -rf  ~/.vscode/extensions
-ln -Fsf $DOT_HOME/vscode/extensions ~/.vscode/extensions
 rm -rf  ~/Library/Application\ Support/Code/User/snippets
 ln -Fsf $DOT_HOME/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 
