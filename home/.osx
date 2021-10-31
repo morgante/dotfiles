@@ -20,7 +20,7 @@ spctl --master-disable
 ###############################################################################
 
 # Set proxy bypass settings
-networksetup -setproxybypassdomains Wi-Fi localhost *.local *.dev 127.0.0.1 *.businessinsider.com
+networksetup -setproxybypassdomains Wi-Fi localhost "*.local" "*.dev" 127.0.0.1 "*.businessinsider.com"
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
