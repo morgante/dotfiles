@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 4,
+    "window.zoomLevel": 2,
     "python.disablePromptForFeatures": [
         "pylint"
     ],
@@ -65,7 +65,8 @@
     "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "editor.fontLigatures": null,
-    "terminal.explorerKind": "external"
+    "terminal.explorerKind": "external",
+    "go.toolsManagement.autoUpdate": true
     // "go.formatOnSave": true
     
 }
