@@ -21,7 +21,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man-pages colorize github jira vagrant virtualenv pip python brew osx history common-aliases fasd)
+plugins=(git colored-man-pages colorize github jira vagrant virtualenv pip python brew macos history common-aliases fasd)
 
 source $ZSH/oh-my-zsh.sh
 
