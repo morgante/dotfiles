@@ -1,71 +1,156 @@
 {
-    "window.zoomLevel": 2,
-    "python.disablePromptForFeatures": [
-        "pylint"
-    ],
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/.terraform": true
+  "python.disablePromptForFeatures": ["pylint"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.turbo": true,
+    "**/.trunk/*out": true
+  },
+  "editor.renderWhitespace": "all",
+  "editor.minimap.enabled": false,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+  },
+  "git.autofetch": true,
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.general.tags": [
+    "XXX",
+    "TODO",
+    "HACK",
+    "FIXME",
+    "BUG",
+    "QUESTION",
+    "[ ]",
+    "[x]"
+  ],
+  "cloudcode.gke": {
+    "projectIds": []
+  },
+  "python.languageServer": "Pylance",
+  "cSpell.userWords": [
+    "Kubernetes",
+    "anthos",
+    "devsite",
+    "endsetvar",
+    "gcloud",
+    "kubectl",
+    "nomos",
+    "setvar"
+  ],
+  "workbench.startupEditor": "newUntitledFile",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "editor.fontLigatures": null,
+  "terminal.explorerKind": "external",
+  "go.toolsManagement.autoUpdate": true,
+  "editor.inlineSuggest.enabled": true,
+  "redhat.telemetry.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "ruby.useBundler": true, //run non-lint commands with bundle exec
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // enable rubocop via bundler
     },
-    "editor.renderWhitespace": "all",
-    "editor.minimap.enabled": false,
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "editor.tabSize": 2,
-    "terraform.indexing": {
-        "enabled": false,
-        "liveIndexing": false,
-        "delay": 500,
-        "exclude": [
-            ".terraform/**/*",
-            "**/.terraform/**/*"
-        ]
+    "reek": {
+      "useBundler": true // enable reek via bundler
+    }
+  },
+  "ruby.format": "rubocop",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[cue]": {
+    "editor.defaultFormatter": "jallen7usa.vscode-cue-fmt"
+  },
+  "[starlark]": {
+    "editor.defaultFormatter": "BazelBuild.vscode-bazel"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "window.zoomLevel": 2,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.accessibilitySupport": "off",
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
+  "terraform.languageServer.enable": true,
+  "files.associations": {
+    "*.mdoc": "markdown"
+  },
+  "debug.javascript.autoAttachFilter": "disabled",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "playwright.reuseBrowser": true,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "debug.onTaskErrors": "debugAnyway",
+  "terminal.integrated.detectLocale": "off",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
     },
-    "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
+    "zsh": {
+      "path": "zsh",
+      "overrideName": "zsh",
+      "args": ["-l"]
     },
-    "git.autofetch": true,
-    "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.general.tags": [
-        "XXX",
-        "TODO",
-        "HACK",
-        "FIXME",
-        "BUG",
-        "QUESTION",
-        "[ ]",
-        "[x]"
-    ],
-    "cloudcode.gke": {
-        "projectIds": []
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
     },
-    "python.languageServer": "Pylance",
-    "cSpell.userWords": [
-        "Kubernetes",
-        "anthos",
-        "devsite",
-        "endsetvar",
-        "gcloud",
-        "kubectl",
-        "nomos",
-        "setvar"
-    ],
-    "workbench.startupEditor": "newUntitledFile",
-    "[markdown]": {
-        "editor.defaultFormatter": "darkriszty.markdown-table-prettify"
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
     },
-    
-    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "editor.fontLigatures": null,
-    "terminal.explorerKind": "external",
-    "go.toolsManagement.autoUpdate": true
-    // "go.formatOnSave": true
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "trunk.trunkGrayOutNonBlockingIssues": false,
+  "files.watcherExclude": {
+    "**/.trunk/*out": true
+  },
+  "cloudcode.updateChannel": "Insiders",
+  "editor.tabSize": 2,
+  "settingsSync.ignoredExtensions": ["grit.grit-vscode"] // use rubocop for formatting
+  // "go.formatOnSave": true
 }

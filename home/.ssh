@@ -23,3 +23,11 @@ host github.com
  HostName github.com
  IdentityFile ~/.ssh/id_rsa_github
  User git
+
+host cloudtop
+  HostName 34.72.43.255
+  User morgante
+
+host edda
+  HostName 159.223.109.196
+  User root
