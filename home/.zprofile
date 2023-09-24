@@ -81,8 +81,8 @@ alias tf12='terraform12'
 
 # Use Cursor as primary editor
 alias c='cursor'
-export EDITOR="c"
-export GIT_EDITOR="c -w"
+export EDITOR="cursor"
+export GIT_EDITOR="cursor -w"
 
 # Git Stuff
 export PATH=$PATH:~/dotfiles/home/git/
