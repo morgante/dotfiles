@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.pre.zsh"
 # source /opt/boxen/env.sh
 source ~/.private
 
@@ -7,8 +5,10 @@ source ~/.private
 alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git status \;"
 
 # Custodian branding
-export ROOT_ANALYSIS_DIR=/Users/morgante/code/unhack/rewriter/data/
-alias gritdev=/Users/morgante/code/unhack/rewriter/apps/cli/bin/dev
+export ROOT_ANALYSIS_DIR=/Users/morgante/code/grit/data/
+export GRIT_MARZANO_PATH=/Users/morgante/code/grit/rewriter/target/release/marzano
+export GRIT_CLI_PATH=/Users/morgante/code/grit/rewriter/apps/cli/run.js
+alias gritdev=/Users/morgante/code/grit/rewriter/target/release/marzano
 
 # Docker shortcuts
 alias dkr='docker'
@@ -51,7 +51,8 @@ alias docker-killall='docker kill $(docker ps -q)'
 
 # Lazy git
 alias up='git commit -a -m "yo" && git push'
-alias yolo='git commit -m "yolo" && git push'
+alias yolo='git commit -m "[skip ci] yolo" && git push'
+alias solo='git commit --allow-empty -m "run the tests" && git push'
 alias folo='git commit --amend --no-edit && git push --force'
 
 # GPG
@@ -78,9 +79,10 @@ alias python='python3'
 alias tf='terraform'
 alias tf12='terraform12'
 
-# Use VS code as editor
-export EDITOR="code"
-export GIT_EDITOR="code -w"
+# Use Cursor as primary editor
+alias c='cursor'
+export EDITOR="c"
+export GIT_EDITOR="c -w"
 
 # Git Stuff
 export PATH=$PATH:~/dotfiles/home/git/
@@ -89,5 +91,6 @@ export PATH=$PATH:~/dotfiles/home/git/
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:~/go/bin
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.post.zsh"
+# Namespace
+export NS_ROOT="/Users/morgante/Library/Application Support/ns"
+export PATH="$NS_ROOT/bin:$PATH"

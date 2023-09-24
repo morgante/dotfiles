@@ -1,15 +1,11 @@
 {
   "python.disablePromptForFeatures": ["pylint"],
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/.turbo": true,
-    "**/.trunk/*out": true
+    "**/.trunk/*out": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*plugins/": true
   },
   "editor.renderWhitespace": "all",
   "editor.minimap.enabled": false,
@@ -60,9 +56,10 @@
   "redhat.telemetry.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
     "plaintext": true,
-    "markdown": true
+    "markdown": true,
+    "scminput": false,
+    "yaml": true
   },
   "security.workspace.trust.untrustedFiles": "open",
   "ruby.useBundler": true, //run non-lint commands with bundle exec
@@ -81,7 +78,8 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
@@ -97,6 +95,11 @@
   },
   "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
   },
   "window.zoomLevel": 2,
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -147,10 +150,27 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "trunk.trunkGrayOutNonBlockingIssues": false,
   "files.watcherExclude": {
-    "**/.trunk/*out": true
+    "**/.trunk/*out": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*plugins/": true
   },
   "cloudcode.updateChannel": "Insiders",
   "editor.tabSize": 2,
-  "settingsSync.ignoredExtensions": ["grit.grit-vscode"] // use rubocop for formatting
+  "settingsSync.ignoredExtensions": ["grit.grit-vscode"],
+  "python.terminal.activateEnvironment": false,
+  "editor.renderControlCharacters": false,
+  "git.openRepositoryInParentFolders": "never",
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.renderColons": false,
+  "rust-analyzer.check.command": "clippy",
+  "cody.serverEndpoint": "https://sourcegraph.com/",
+  "cody.autocomplete.enabled": false,
+  "tailwindCSS.experimental.classRegex": [],
+  "githubPullRequests.pullBranch": "never",
+  "python.formatting.provider": "none"
   // "go.formatOnSave": true
 }

@@ -31,3 +31,7 @@ host cloudtop
 host edda
   HostName 159.223.109.196
   User root
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh
