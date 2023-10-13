@@ -171,6 +171,12 @@
   "cody.autocomplete.enabled": false,
   "tailwindCSS.experimental.classRegex": [],
   "githubPullRequests.pullBranch": "never",
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "workbench.colorTheme": "Default Dark Modern",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false
+  },
+  "playwright.env": {},
+  "files.autoSave": "afterDelay"
   // "go.formatOnSave": true
 }
