@@ -1,6 +1,7 @@
 # source /opt/boxen/env.sh
 source ~/.private
 
+
 # Get status of all git repos in current directory
 alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git status \;"
 
@@ -28,7 +29,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Add home-brew to Path
-export PATH=$PATH:/opt/homebrew/bin/
+export PATH=/opt/homebrew/bin/:$PATH
 
 # Add python
 export PATH=$PATH:~/Library/Python/3.8/bin/

@@ -7,6 +7,10 @@ SAVEHIST=1000
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/dotfiles/home/oh-my-zsh
 
+
+# Prefer our Brew git
+alias git='/opt/homebrew/bin//git'
+
 # use pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
