@@ -10,8 +10,6 @@
 
 	bash strap/bin/strap.sh
 
-1. Install [Source Code Pro for Powerline](https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf)
-
 1. Set up symlinks from `script/setup` (manually).
 
 1. Update OS X settings in System Preferences
@@ -20,5 +18,8 @@
 - Mission Control > Spaces: uncheck automatically rearrange Spaces based on most recent use
 - Mission Control > Hot Corners: disable all
 - [Allow Hammerspoon control](https://github.com/Hammerspoon/hammerspoon/issues/237#issuecomment-476320469): `System Preferences > Security & Privacy > Privacy tab > Accessibility`
+- Trackpad -> Tap to click
+- Trackpad -> Fast-2 track speed
 
+## Troubleshooting
 1. Install hammerspoon spaces from [here](https://github.com/asmagill/hammerspoon_asm/tree/master/spaces) for M1.
