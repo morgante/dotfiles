@@ -552,6 +552,8 @@
   # Show this many fractional digits. Zero means round to seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=3
   # Duration format: 1d 2h 3m 4s.
+  # If we want ms, use this:
+  # POWERLEVEL9K_COMMAND_EXECUTION_TIME_CONTENT_EXPANSION='$((int(1000 * P9K_COMMAND_DURATION_SECONDS)))'
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
   # Custom icon.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_VISUAL_IDENTIFIER_EXPANSION=
