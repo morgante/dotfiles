@@ -17,20 +17,19 @@ ln -sf $DOT_HOME/.zshrc ~/.zshrc
 ln -sf $DOT_HOME/.p10k.zsh ~/.p10k.zsh
 ln -sf $DOT_HOME/git/config ~/.gitconfig
 ln -Fsf $DOT_HOME/hammerspoon/ ~/.hammerspoon
-ln -sf /usr/local/google/home/morgantep ~/google
-ln -s ~/go/src/github.com/google/addlicense/addlicense ~/go/bin/addlicense
 
 ln -Fsf $DOT_HOME/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 rm -rf  ~/Library/Application\ Support/Code/User/snippets
 ln -Fsf $DOT_HOME/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 
-
-ln -sf ~/sshfs/usr/local/google/home/morgantep ~/code/home
+# Google stuff
+# ln -sf ~/sshfs/usr/local/google/home/morgantep ~/code/home
+# ln -sf /usr/local/google/home/morgantep ~/google
+# ln -s ~/go/src/github.com/google/addlicense/addlicense ~/go/bin/addlicense
 
 # Iterm
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$DOT_HOME/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
 
 # Touch
 touch ~/.private
