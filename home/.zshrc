@@ -1,12 +1,9 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/dotfiles/home/oh-my-zsh
-
 
 # Prefer our Brew git
 alias git='/opt/homebrew/bin//git'
@@ -74,6 +71,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
