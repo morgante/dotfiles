@@ -14,6 +14,7 @@ sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 ln -sf $DOT_HOME/.ssh ~/.ssh/config
 ln -sf $DOT_HOME/.zprofile ~/.zprofile
 ln -sf $DOT_HOME/.zshrc ~/.zshrc
+ln -sf $DOT_HOME/.p10k.sh ~/.p10k.zsh
 ln -sf $DOT_HOME/git/config ~/.gitconfig
 ln -Fsf $DOT_HOME/hammerspoon/ ~/.hammerspoon
 ln -sf /usr/local/google/home/morgantep ~/google
