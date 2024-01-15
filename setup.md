@@ -21,5 +21,13 @@
 - Trackpad -> Tap to click
 - Trackpad -> Fast-2 track speed
 
+1. Launch VS Code once to sync extensions.
+
+1. Install [Cursor](https://cursor.sh/) and allow it to import extensions from VS code.
+
+1. Download SSH keys (ssh.zip) from 1Password and move them to ~/.ssh/
+
+		mv ~/Downloads/ssh_keys/* ~/.ssh/
+
 ## Troubleshooting
 1. Install hammerspoon spaces from [here](https://github.com/asmagill/hammerspoon_asm/tree/master/spaces) for M1.
