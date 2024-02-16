@@ -8,8 +8,7 @@ alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git stat
 # Custodian branding
 export ROOT_ANALYSIS_DIR=/Users/morgante/code/grit/data/
 export GRIT_MARZANO_PATH=/Users/morgante/code/grit/rewriter/target/release/marzano
-export GRIT_CLI_PATH=/Users/morgante/code/grit/rewriter/apps/cli/run.js
-alias gritdev=/Users/morgante/code/grit/rewriter/target/release/marzano
+alias gritdev=$GRIT_MARZANO_PATH
 
 # Docker shortcuts
 alias dkr='docker'
@@ -91,6 +90,9 @@ export PATH=$PATH:~/dotfiles/home/git/
 # Go stuff
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:~/go/bin
+
+# Rust stuff
+export PATH=$PATH:/Users/morgante/.cargo/bin
 
 # Namespace
 export NS_ROOT="/Users/morgante/Library/Application Support/ns"

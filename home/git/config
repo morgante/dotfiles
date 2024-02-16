@@ -11,3 +11,5 @@
 	cookiefile = /Users/morgantep/.gitcookies
 [init]
 	defaultBranch = main
+[rerere]
+	enabled = true
