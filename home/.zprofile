@@ -8,7 +8,9 @@ alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git stat
 # Custodian branding
 export ROOT_ANALYSIS_DIR=/Users/morgante/code/grit/data/
 export GRIT_MARZANO_PATH=/Users/morgante/code/grit/rewriter/target/release/marzano
+export GRIT_WORKFLOW_RUNNER=/Users/morgante/code/grit/rewriter/apps/minas/run.js
 alias gritdev=$GRIT_MARZANO_PATH
+alias gouda=/Users/morgante/code/grit/rewriter/target/debug/gouda
 
 # Docker shortcuts
 alias dkr='docker'
