@@ -1,15 +1,17 @@
 [push]
 	default = simple
-[credential]
-	helper = osxkeychain
 [user]
 	name = Morgante Pell
-	email = morgantep@google.com
+	email = me@morgante.net
 [pull]
 	rebase = false
 [http]
 	cookiefile = /Users/morgantep/.gitcookies
+	version = HTTP/1.1
+	noKeepAlive = true
 [init]
 	defaultBranch = main
 [rerere]
 	enabled = true
+[core]
+	editor = cursor --wait

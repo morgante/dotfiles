@@ -41,7 +41,7 @@ unsetopt HIST_VERIFY
 ZSH=$HOME/dotfiles/home/oh-my-zsh
 
 # Prefer our Brew git
-alias git='/opt/homebrew/bin//git'
+alias git='/opt/homebrew/bin/git'
 
 # use pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -111,3 +111,27 @@ eval "$(pyenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+. "$HOME/.cargo/env"
+
+# grit
+export GRIT_INSTALL="$HOME/.grit"
+export PATH="$GRIT_INSTALL/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# grit
+export GRIT_INSTALL="$HOME/.grit"
+export PATH="$GRIT_INSTALL/bin:$PATH"
+
+# ni
+alias ni="/Users/morgante/.nvm/versions/node/v18.20.0/bin/ni"
+eval "$(direnv hook zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by Windsurf
+export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"

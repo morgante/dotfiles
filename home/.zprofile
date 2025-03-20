@@ -7,10 +7,12 @@ alias git-check="find . -maxdepth 4 -name .git -execdir pwd \; -execdir git stat
 
 # Custodian branding
 export ROOT_ANALYSIS_DIR=/Users/morgante/code/grit/data/
-export GRIT_MARZANO_PATH=/Users/morgante/code/grit/rewriter/target/release/marzano
+export GRIT_MARZANO_PATH=/Users/morgante/code/grit/rewriter/target/release/grit
+export GRIT_GOUDA_PATH=/Users/morgante/code/grit/rewriter/target/debug/gouda
 export GRIT_WORKFLOW_RUNNER=/Users/morgante/code/grit/rewriter/apps/minas/run.js
+export GRIT_USER_CONFIG=/Users/morgante/code/grit/rewriter/.grit/
 alias gritdev=$GRIT_MARZANO_PATH
-alias gouda=/Users/morgante/code/grit/rewriter/target/debug/gouda
+alias gouda=$GRIT_GOUDA_PATH
 
 # Docker shortcuts
 alias dkr='docker'
@@ -56,6 +58,7 @@ alias up='git commit -a -m "yo" && git push'
 alias yolo='git commit -m "[skip ci] yolo" && git push'
 alias solo='git commit --allow-empty -m "run the tests" && git push'
 alias folo='git commit --amend --no-edit && git push --force'
+alias gca='git commit --amend --no-edit'
 
 # GPG
 # export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
@@ -73,18 +76,16 @@ alias folo='git commit --amend --no-edit && git push --force'
 # Docker Machine
 # source ~/src/dotfiles/home/docker.sh
 
-# Python version
-alias python='python3'
-
 # Terraform
 # alias terraform='terraform12'
 alias tf='terraform'
 alias tf12='terraform12'
 
-# Use Cursor as primary editor
+# Set primary editor
 alias c='cursor'
-export EDITOR="cursor"
-export GIT_EDITOR="cursor -w"
+alias w='windsurf'
+export EDITOR="cursor --wait"
+export GIT_EDITOR="cursor --wait"
 
 # Git Stuff
 export PATH=$PATH:~/dotfiles/home/git/
@@ -99,3 +100,12 @@ export PATH=$PATH:/Users/morgante/.cargo/bin
 # Namespace
 export NS_ROOT="/Users/morgante/Library/Application Support/ns"
 export PATH="$NS_ROOT/bin:$PATH"
+
+# Poetry
+export PATH="/Users/morgante/.local/bin:$PATH"
+
+# Biome development
+export PATH="$PATH:/Users/morgante/code/biome/target/release/"
+
+# Rye
+source "$HOME/.rye/env"

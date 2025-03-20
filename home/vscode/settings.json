@@ -161,7 +161,7 @@
   "settingsSync.ignoredExtensions": ["grit.grit-vscode"],
   "python.terminal.activateEnvironment": false,
   "editor.renderControlCharacters": false,
-  "git.openRepositoryInParentFolders": "never",
+  "git.openRepositoryInParentFolders": "always",
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
@@ -172,7 +172,7 @@
   "tailwindCSS.experimental.classRegex": [],
   "githubPullRequests.pullBranch": "never",
   "python.formatting.provider": "none",
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Monokai",
   "editor.codeActionsOnSave": {
     "source.fixAll": "never"
   },
@@ -239,6 +239,6 @@
         }
       ]
     }
-  },"remote.SSH.remotePlatform": {"coder-vscode--morgante--viewthespace-lane-next":"linux","coder-vscode--morgante--lane-next-two":"linux"}
+  }
   // "go.formatOnSave": true
 }
