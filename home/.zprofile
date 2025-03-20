@@ -107,5 +107,5 @@ export PATH="/Users/morgante/.local/bin:$PATH"
 # Biome development
 export PATH="$PATH:/Users/morgante/code/biome/target/release/"
 
-# Rye
-source "$HOME/.rye/env"
+# Homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
