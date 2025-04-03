@@ -57,7 +57,7 @@ alias docker-killall='docker kill $(docker ps -q)'
 alias up='git commit -a -m "yo" && git push'
 alias yolo='git commit -m "[skip ci] yolo" && git push'
 alias solo='git commit --allow-empty -m "run the tests" && git push'
-alias folo='git commit --amend --no-edit && git push --force'
+alias molo='git commit --amend --no-edit && git push --force'
 alias gca='git commit --amend --no-edit'
 
 # GPG
