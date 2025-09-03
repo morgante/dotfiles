@@ -105,3 +105,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Windsurf
 export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
+
+# Weird bindkeys for VS Code
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word
