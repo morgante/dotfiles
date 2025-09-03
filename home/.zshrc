@@ -43,11 +43,6 @@ ZSH=$HOME/dotfiles/home/oh-my-zsh
 # Prefer our Brew git
 alias git='/opt/homebrew/bin/git'
 
-# use pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -69,21 +64,11 @@ plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
+# Make iterm work
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Prettier prompt when SSHed in
-# This is incompatible with powerlevel10k
-# prompt_context() {
-#   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-#     prompt_segment black white "%(!.%{%F{yellow}%}.)$USER@%m"
-#   fi
-# }
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-export PATH="$PATH:/Users/morgante/.foundry/bin"
+# Make vscode integration work
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # pnpm
 export PNPM_HOME="/Users/morgante/Library/pnpm"
@@ -93,33 +78,18 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-# bun completions
-[ -s "/Users/morgante/.bun/_bun" ] && source "/Users/morgante/.bun/_bun"
-
-# bun
+# BUN
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "/Users/morgante/.bun/_bun" ] && source "/Users/morgante/.bun/_bun"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# p10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 . "$HOME/.cargo/env"
-
-# grit
-export GRIT_INSTALL="$HOME/.grit"
-export PATH="$GRIT_INSTALL/bin:$PATH"
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # grit
 export GRIT_INSTALL="$HOME/.grit"
@@ -135,12 +105,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Windsurf
 export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
-
-# Honeycomb
-. ~/.hnytools/hnytools.sh
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/morgante/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
