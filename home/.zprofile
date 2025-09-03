@@ -107,5 +107,8 @@ export PATH="/Users/morgante/.local/bin:$PATH"
 # Biome development
 export PATH="$PATH:/Users/morgante/code/biome/target/release/"
 
+# AWS
+alias awslogin="aws sso login --sso-session sso-default"
+
 # Homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
