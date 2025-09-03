@@ -135,3 +135,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by Windsurf
 export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
+
+# Honeycomb
+. ~/.hnytools/hnytools.sh
