@@ -83,9 +83,9 @@ alias tf12='terraform12'
 
 # Set primary editor
 alias c='cursor'
-alias w='windsurf'
-export EDITOR="cursor --wait"
-export GIT_EDITOR="cursor --wait"
+alias w='surf'
+export EDITOR="windsurf-insiders --wait"
+export GIT_EDITOR="windsurf-insiders --wait"
 
 # Git Stuff
 export PATH=$PATH:~/dotfiles/home/git/
