@@ -109,3 +109,7 @@ export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
 # Weird bindkeys for VS Code
 bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
+
+# Added by Windsurf - Insiders
+export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
+alias surf="surf-insiders"
