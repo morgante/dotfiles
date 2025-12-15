@@ -1,0 +1,6 @@
+if { true <&3 } 2>/dev/null; then
+  _fd3_tmpfile="/var/tmp/zshenv-fd3.$$.tmp"
+  echo "fd3 present"
+  command cat <&3 >| "${_fd3_tmpfile}" 2>/dev/null
+  unset _fd3_tmpfile
+fi
