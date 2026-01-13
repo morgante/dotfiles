@@ -168,8 +168,9 @@ defaults write com.apple.BezelServices kDimTime -int 120
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+# Save screenshots to the shelf
+mkdir -p "$HOME/shelf"
+defaults write com.apple.screencapture location -string "$HOME/shelf"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -373,9 +374,9 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 # Transmission.app                                                            #
 ###############################################################################
 
-# Use `~/Shelf/Torrents` to store incomplete downloads
+# Use `~/shelf/Torrents` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Shelf/Torrents"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/shelf/Torrents"
 
 # Don’t prompt for confirmation before downloading
 # defaults write org.m0k.transmission DownloadAsk -bool false
