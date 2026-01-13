@@ -113,3 +113,6 @@ bindkey "^[[1;3C" forward-word
 # Added by Windsurf - Insiders
 export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
 alias surf="surf-insiders"
+
+# Added by Windsurf
+export PATH="/Users/morgante/.codeium/windsurf/bin:$PATH"
