@@ -56,8 +56,54 @@ alias docker-killall='docker kill $(docker ps -q)'
 # Lazy git
 alias up='git commit -a -m "yo" && git push'
 alias yolo='git commit -m "[skip ci] yolo" && git push'
-alias solo='git commit --allow-empty -m "run the tests" && git push'
-alias molo='git commit --amend --no-edit --no-verify && git push --force'
+_solo_molo_guard() {
+  if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "solo/molo: not in a git repository" >&2
+    return 1
+  fi
+
+  if ! git rev-parse --verify HEAD >/dev/null 2>&1; then
+    echo "solo/molo: repository has no commits" >&2
+    return 1
+  fi
+
+  local branch
+  branch="$(git symbolic-ref --quiet --short HEAD 2>/dev/null)"
+  if [ -z "$branch" ]; then
+    echo "solo/molo: detached HEAD is not supported" >&2
+    return 1
+  fi
+  if [ "$branch" = "main" ]; then
+    echo "solo/molo: refusing to run on branch 'main'" >&2
+    return 1
+  fi
+
+  local me_email last_author_email
+  me_email="$(git config user.email)"
+  last_author_email="$(git show -s --format='%ae' HEAD)"
+  if [ -z "$me_email" ] || [ -z "$last_author_email" ] || [ "$me_email" != "$last_author_email" ]; then
+    echo "solo/molo: last commit author is not you" >&2
+    return 1
+  fi
+
+  if [ "$(git rev-list --parents -n 1 HEAD | awk '{print NF}')" -gt 2 ]; then
+    echo "solo/molo: refusing to amend a merge commit" >&2
+    return 1
+  fi
+}
+
+unalias solo 2>/dev/null
+unalias molo 2>/dev/null
+
+solo() {
+  _solo_molo_guard || return 1
+  git commit --amend --no-edit --no-verify
+}
+
+molo() {
+  _solo_molo_guard || return 1
+  git commit --amend --no-edit --no-verify && git push --force
+}
 alias gca='git commit --amend --no-edit'
 
 # GPG
